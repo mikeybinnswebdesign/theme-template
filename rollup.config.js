@@ -33,5 +33,8 @@ export default {
 				path: "./postcss.config.js",
 			},
 		}),
+		static_files({
+			include: ["./src/wordpress/theme"],
+		}),
 	],
 };
