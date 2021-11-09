@@ -8,6 +8,7 @@
 4. Run `npm install` and `composer install` to install all the npm and composer dependencies.
 5. Update dependencies as required.
 6. Perform code editor setup, instructions below.
+7. Start a git repository for your theme.
 
 ## Placeholders
 
