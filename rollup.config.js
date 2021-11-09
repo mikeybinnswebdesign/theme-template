@@ -34,7 +34,7 @@ export default {
 			},
 		}),
 		static_files({
-			include: ["./src/wordpress/theme"],
+			include: ["./src/wordpress/theme", "./src/copy"],
 		}),
 	],
 };
