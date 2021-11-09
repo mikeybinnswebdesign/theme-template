@@ -1,0 +1,47 @@
+{
+	"name": "%%THEME_NAME%%",
+	"version": "1.0.0",
+	"description": "",
+	"repository": "",
+	"contributors": [
+		{
+			"name": "%%AUTHOR%%",
+			"email": "%%AUTHOR_EMAIL%%",
+			"url": "%%AUTHOR_URL%%"
+		}
+	],
+	"license": "GPL-2.0-or-later",
+	"browserslist": [
+		"defaults",
+		"not dead",
+		"not IE 11"
+	],
+	"scripts": {
+		"watch": "rollup -c -w",
+		"build": "rollup -c"
+	},
+	"devDependencies": {
+		"@babel/core": "^7.16.0",
+		"@babel/preset-env": "^7.16.0",
+		"@rollup/plugin-node-resolve": "^13.0.6",
+		"cssnano": "^5.0.10",
+		"eslint": "^8.2.0",
+		"eslint-config-prettier": "^8.3.0",
+		"eslint-plugin-import": "^2.25.2",
+		"postcss": "^8.3.11",
+		"postcss-preset-env": "^6.7.0",
+		"prettier": "^2.4.1",
+		"rollup": "^2.59.0",
+		"rollup-plugin-cleaner": "^1.0.0",
+		"rollup-plugin-postcss": "^4.0.1",
+		"rollup-plugin-scss": "^3.0.0",
+		"rollup-plugin-terser": "^7.0.2",
+		"sass": "^1.43.4",
+		"stylelint": "^14.0.1",
+		"stylelint-config-idiomatic-order": "^8.1.0",
+		"stylelint-config-prettier": "^9.0.3",
+		"stylelint-config-sass-guidelines": "^9.0.1",
+		"stylelint-no-unsupported-browser-features": "^5.0.2"
+	},
+	"dependencies": {}
+}

@@ -1,0 +1,4 @@
+includes:
+	- phpstan.neon.dist
+parameters:
+	editorUrl: 'atom://core/open/file?filename=%%file%%&line=%%line%%'

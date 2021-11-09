@@ -1,0 +1,32 @@
+{
+	"name": "tgos/%%THEME_NAME_SLUG%%",
+	"description": "This theme is custom built for %%THEME_NAME%%. Please read the README file before making any changes.",
+	"license": "GPL-2.0-or-later",
+	"authors": [
+		{
+			"name": "%%AUTHOR%%",
+			"homepage": "%%AUTHOR_URL%%",
+			"role": "Developer"
+		}
+	],
+	"minimum-stability": "stable",
+	"require-dev": {
+		"squizlabs/php_codesniffer": "^3.5.8",
+		"wptrt/wpthemereview": "^0.2.1",
+		"paulthewalton/acf-pro-stubs": "^5.8",
+		"wp-cli/wp-cli-bundle": "^2.4.0",
+		"dealerdirect/phpcodesniffer-composer-installer": "^0.7.1",
+		"phpstan/phpstan": "^0.12.83",
+		"szepeviktor/phpstan-wordpress": "^0.7.5",
+		"php-stubs/wordpress-stubs": "^5.7",
+		"php-stubs/woocommerce-stubs": "^5.2"
+	},
+	"scripts": {
+		"lint": "phpcs",
+		"lint:errors": "phpcs -n",
+		"format": "phpcbf",
+		"format:errors": "phpcbf -n",
+		"stan": "phpstan analyse --memory-limit 1G",
+		"stan-clear": "phpstan clear-result-cache"
+	}
+}

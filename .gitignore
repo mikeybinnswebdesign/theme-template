@@ -1,0 +1,11 @@
+# npm packages (non-dev packages are reinstalled before site upload)
+node_modules/
+
+# Composer packages (non-dev packages are reinstalled before site upload)
+vendor/
+
+# Workflow caches
+.stylelintcache
+
+# Personal PHPStan configs
+src/wordpress/phpstan.neon

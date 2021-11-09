@@ -1,0 +1,46 @@
+name: Deploying to staging
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    name: Run tests and deploy to staging
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Setup PHP with PECL extension
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: "7.4"
+          extensions: fileinfo
+      - name: Validate composer.json and composer.lock
+        run: composer validate --strict
+      - name: Cache Composer dependencies
+        id: composer-cache
+        uses: actions/cache@v2
+        with:
+          path: vendor
+          key: ${{ runner.os }}-${{ hashFiles('**/composer.lock') }}
+      - name: Install dependencies
+        run: composer install --prefer-dist --no-progress
+      - name: Run linting
+        run: composer lint:errors
+      - name: Automatically format code
+        if: failure()
+        run: |
+          composer format
+          composer lint:errors
+      - name: Install dependencies
+        run: composer install --no-dev --optimize-autoloader --no-progress
+      - name: FTP-Deploy-Action
+        uses: SamKirkland/FTP-Deploy-Action@4.0.0
+        with:
+          server: ${{ secrets.STAGING_SERVER_IP }}
+          port: 21
+          server-dir: wp-content/themes/%%THEME_NAME_SLUG%%/
+          username: ${{ secrets.STAGING_FTP_USERNAME }}
+          password: ${{ secrets.STAGING_FTP_PASSWORD }}
+          # Requires secrets to be added to the repo (Settings > Secrets)

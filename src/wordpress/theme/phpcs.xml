@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<ruleset name="Theme Rules">
+	<!-- Must config below this comment until config-stop -->
+	<rule ref="WordPress.WP.I18n">
+		<properties>
+			<property name="text_domain" type="array">
+				<element value="%%THEME_NAME_SLUG%%"/><!-- Adjust this -->
+			</property>
+		</properties>
+	</rule>
+	<!-- config-stop -->
+	<rule ref="../common-php-rules.xml"/>
+	<file>.</file>
+	<rule ref="WPThemeReview">
+		<exclude name="WPThemeReview.PluginTerritory.ForbiddenFunctions.plugin_territory_register_post_type"/>
+		<exclude name="WPThemeReview.PluginTerritory.ForbiddenFunctions.plugin_territory_register_taxonomy"/>
+	</rule>
+	<rule ref="WordPress.Files.FileName">
+		<properties>
+			<property name="is_theme" value="true"/>
+		</properties>
+	</rule>
+</ruleset>

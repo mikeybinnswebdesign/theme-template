@@ -1,0 +1,49 @@
+name: Deploying to production
+
+on:
+  release:
+    types:
+      - released
+      - deleted
+
+jobs:
+  deploy:
+    name: Run tests and deploy to production
+    runs-on: ubuntu-latest
+    steps:
+      - name: get latest release with tag
+        id: latestrelease
+        run: |
+          echo "::set-output name=releasetag::$(curl -s https://api.github.com/repos/${{ github.repository }}/releases/latest --header 'authorization: Bearer ${{ secrets.GITHUB_TOKEN }}' | jq '.tag_name' | sed 's/\"//g')"
+      - name: tagcheckout
+        uses: actions/checkout@v2
+        with:
+          ref: ${{ steps.latestrelease.outputs.releasetag }}
+      - name: Setup PHP with PECL extension
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: "7.4"
+          extensions: fileinfo
+      - name: Validate composer.json and composer.lock
+        run: composer validate --strict
+      - name: Cache Composer dependencies
+        id: composer-cache
+        uses: actions/cache@v2
+        with:
+          path: vendor
+          key: ${{ runner.os }}-${{ hashFiles('**/composer.lock') }}
+      - name: Install dependencies
+        run: composer install --prefer-dist --no-progress
+      - name: Run linting
+        run: composer lint:errors
+      - name: Install dependencies
+        run: composer install --no-dev --optimize-autoloader --no-progress
+      - name: FTP-Deploy-Action
+        uses: SamKirkland/FTP-Deploy-Action@4.0.0
+        with:
+          server: ${{ secrets.SERVER_IP }}
+          port: 21
+          server-dir: wp-content/themes/%%THEME_NAME_SLUG%%/
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          # Requires secrets to be added to the repo (Settings > Secrets)

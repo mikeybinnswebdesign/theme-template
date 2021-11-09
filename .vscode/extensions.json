@@ -1,0 +1,14 @@
+{
+	"recommendations": [
+		"editorconfig.editorconfig",
+		"dbaeumer.vscode-eslint",
+		"esbenp.prettier-vscode",
+		"stylelint.vscode-stylelint",
+		"mrmlnc.vscode-scss",
+		"swordev.phpstan",
+		"ikappas.phpcs",
+		"valeryanm.vscode-phpsab",
+		"bmewburn.vscode-intelephense-client",
+		"formulahendry.auto-rename-tag"
+	]
+}

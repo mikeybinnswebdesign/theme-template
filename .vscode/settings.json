@@ -1,0 +1,9 @@
+{
+	"phpsab.snifferEnable": false,
+	"phpsab.executablePathCS": "vendor/bin/phpcs",
+	"phpsab.executablePathCBF": "vendor/bin/phpcbf",
+	"phpcs.errorSeverity": 1,
+	"phpcs.executablePath": "vendor/bin/phpcs",
+	"phpcs.showSources": true,
+	"intelephense.format.enable": false
+}
