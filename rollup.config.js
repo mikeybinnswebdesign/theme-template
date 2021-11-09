@@ -28,7 +28,7 @@ export default {
 			targets: ["./build/", theme_location],
 		}),
 		postcss({
-			extract: "css/style.css",
+			extract: "assets/css/style.css",
 			sourceMap: true,
 			config: {
 				path: "./postcss.config.js",
