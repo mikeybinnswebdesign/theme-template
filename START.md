@@ -1,5 +1,13 @@
 # Start
 
+## Requirements
+
+- Node.js
+- Composer
+- A compatible code editor (VS Code)
+- Git
+- A way to host a wordpress site locally
+
 ## Steps to begin
 
 1. Take a copy of this code and copy it into a folder outside of the Wordpress installation (excluding .git folder)
