@@ -15,12 +15,14 @@ export default {
 			format: "esm",
 			entryFileNames: "[name].[hash].min.js",
 			plugins: [terser()],
+			sourcemap: true,
 		},
 		{
 			dir: theme_location,
 			format: "esm",
 			entryFileNames: "[name].[hash].min.js",
 			plugins: [terser()],
+			sourcemap: true,
 		},
 	],
 	plugins: [
