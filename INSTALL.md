@@ -24,6 +24,7 @@
 %%THEME_NAME_SLUG%% - all lowercase theme name, should match theme folder name.
 %%THEME_NAMESPACE%% - Theme name with no spaces and in camel case for namespaces.
 %%AUTHOR%% - Theme author name (visible in theme info)
+%%AUTHOR_SLUG%% - Currently only used for composer name.
 %%AUTHOR_URL%% - Web address of theme author (visible in theme info)
 %%AUTHOR_EMAIL%% - email address of theme author (visible in theme info)
 %%MIN_WP_VERSION%% - The minimum support wordpress version for this build (usually the most recent version unless specifically required)

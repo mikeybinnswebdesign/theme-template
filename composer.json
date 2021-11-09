@@ -1,5 +1,5 @@
 {
-	"name": "tgos/%%THEME_NAME_SLUG%%",
+	"name": "%%AUTHOR_SLUG%%/%%THEME_NAME_SLUG%%",
 	"description": "This theme is custom built for %%THEME_NAME%%. Please read the README file before making any changes.",
 	"license": "GPL-2.0-or-later",
 	"authors": [
