@@ -10,7 +10,7 @@ export default {
 	},
 	output: [
 		{
-			dir: "./build/assets/",
+			dir: "./build/",
 			format: "esm",
 			entryFileNames: "[name].[hash].min.js",
 			plugins: [terser()],
