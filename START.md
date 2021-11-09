@@ -14,7 +14,7 @@
 2. Set the wordpress files variable in `rollup.config.js` to point to your local wordpress files.
 3. Use search and replace to change all placeholders as laid out below. When it's done, the table below should act as a helpful reference guide should you need it.
 4. Run `npm install` and `composer install` to install all the npm and composer dependencies.
-5. Update dependencies as required.
+5. Update dependencies as required using `update` and `outdated` commands for both npm and composer. (be careful of breaking changes)
 6. Perform code editor setup, instructions below.
 7. Start a git repository for your theme.
 
