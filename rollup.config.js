@@ -1,8 +1,8 @@
 import postcss from "rollup-plugin-postcss";
 import { terser } from "rollup-plugin-terser";
 import cleaner from "rollup-plugin-cleaner";
-const theme_location =
-	"./../server/app/public/wp-content/themes/%%THEME_NAME_SLUG%%/";
+const wordpress_files = "./../server/app/public/",
+	theme_location = `${wordpress_files}wp-content/themes/%%THEME_NAME_SLUG%%/`;
 
 export default {
 	input: {
