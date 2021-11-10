@@ -1,9 +1,9 @@
+import dotenv from "dotenv";
 import postcss from "rollup-plugin-postcss";
 import { terser } from "rollup-plugin-terser";
 import cleaner from "rollup-plugin-cleaner";
 import static_files from "rollup-plugin-static-files";
-const wordpress_files = "./../server/app/public/",
-	theme_location = `${wordpress_files}wp-content/themes/%%THEME_NAME_SLUG%%/`;
+dotenv.config();
 
 export default {
 	input: {
@@ -18,7 +18,7 @@ export default {
 			sourcemap: true,
 		},
 		{
-			dir: theme_location,
+			dir: process.env.theme_folder,
 			format: "esm",
 			entryFileNames: "[name].[hash].min.js",
 			plugins: [terser()],
@@ -27,7 +27,7 @@ export default {
 	],
 	plugins: [
 		cleaner({
-			targets: ["./build/", theme_location],
+			targets: ["./build/", process.env.theme_folder],
 		}),
 		postcss({
 			extract: "assets/css/style.css",
