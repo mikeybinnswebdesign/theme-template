@@ -9,3 +9,6 @@ vendor/
 
 # Personal PHPStan configs
 src/wordpress/phpstan.neon
+
+# Build folder
+build/
