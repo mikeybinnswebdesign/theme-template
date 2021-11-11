@@ -15,6 +15,7 @@ use WP_Error;
  * @param WP_Error $the_error The WP_Error to output markup for.
  */
 function get_error_markup( WP_Error $the_error ) {
+	$markup = '';
 	if ( count( $the_error->get_error_messages() ) > 1 ) {
 		$markup = '<div class="error_bubble"><p class="error_title">' . esc_html__( 'Uh oh, something went wrong.', '%%THEME_NAME_SLUG%%' ) . '</p><p>' . esc_html__( 'Please rectify the following errors:', '%%THEME_NAME_SLUG%%' ) . '</p><ul>';
 		foreach ( $the_error->get_error_messages() as $error_message ) {
