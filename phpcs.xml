@@ -12,6 +12,7 @@
 	<rule ref="./common-php-rules.xml"/>
 	<file>./src/wordpress</file>
 	<rule ref="WPThemeReview" />
+	<rule ref="./php-version.xml"/>
 	<rule ref="WordPress.Files.FileName">
 		<properties>
 			<property name="is_theme" value="true"/>
