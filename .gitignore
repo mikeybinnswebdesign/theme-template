@@ -8,7 +8,7 @@ vendor/
 .stylelintcache
 
 # Personal PHPStan configs
-src/wordpress/phpstan.neon
+phpstan.neon
 
 # Build folder
 build/
