@@ -9,6 +9,8 @@
  * Enqueue stylesheets and script files
  *
  * This function automatically enqueues files from the relevant folders and enqueues hashed files correctly.
+ * 
+ * @return void
  */
 function enqueue_files() {
 	$js_files = new DirectoryIterator( get_template_directory() . '/assets/js' );
@@ -53,6 +55,8 @@ add_action( 'wp_enqueue_scripts', 'enqueue_files' );
  * @param string $tag this is the tag to be filtered.
  * @param string $handle this is the name for the script as set when enqueued.
  * @param string $src this is the contents of the src attribute in the tag.
+ * 
+ * @return string
  */
 function defer_scripts( $tag, $handle, $src ) {
 	$defer = array(

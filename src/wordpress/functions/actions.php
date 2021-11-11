@@ -9,6 +9,8 @@ namespace %%THEME_NAMESPACE%%\actions;
 
 /**
  * Remove comments from the WP menu.
+ * 
+ * @return void
  */
 function remove_menus() {
 	remove_menu_page( 'edit-comments.php' );

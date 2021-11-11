@@ -13,6 +13,8 @@ use WP_Error;
  * Create markup for a WordPress error.
  *
  * @param WP_Error $the_error The WP_Error to output markup for.
+ * 
+ * @return string
  */
 function get_error_markup( WP_Error $the_error ) {
 	$markup = '';
@@ -36,6 +38,8 @@ function get_error_markup( WP_Error $the_error ) {
  * @param WP_Error $the_error The WP_Error to echo markup for.
  *
  * @see function get_error_markup()
+ * 
+ * @return void
  */
 function display_error( $the_error ) {
 	echo wp_kses( get_error_markup( $the_error ), \%%THEME_NAMESPACE%%\esc\error() );

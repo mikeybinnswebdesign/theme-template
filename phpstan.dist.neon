@@ -1,7 +1,7 @@
 includes:
 	- %rootDir%/../../szepeviktor/phpstan-wordpress/extension.neon
 parameters:
-	level: 5
+	level: 6
 	paths:
 		- src/wordpress
 	bootstrapFiles:

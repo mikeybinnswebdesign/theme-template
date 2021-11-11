@@ -10,7 +10,7 @@ namespace %%THEME_NAMESPACE%%\esc;
 /**
  * Returns select field allowed markup
  *
- * @return array
+ * @return array<mixed>
  */
 function select_field() {
 	return array(
@@ -37,7 +37,7 @@ function select_field() {
 /**
  * Returns text field allowed markup
  *
- * @return array
+ * @return array<mixed>
  */
 function text_field() {
 	return array(
@@ -64,7 +64,7 @@ function text_field() {
 /**
  * Returns hidden field allowed markup
  *
- * @return array
+ * @return array<mixed>
  */
 function hidden_field() {
 	return array(
@@ -80,7 +80,7 @@ function hidden_field() {
 /**
  * Returns textarea allowed markup
  *
- * @return array
+ * @return array<mixed>
  */
 function textarea_field() {
 	return array(
@@ -103,7 +103,7 @@ function textarea_field() {
 /**
  * Returns link allowed markup
  *
- * @return array
+ * @return array<mixed>
  */
 function links() {
 	return array(
@@ -121,7 +121,7 @@ function links() {
 /**
  * Returns button allowed markup
  *
- * @return array
+ * @return array<mixed>
  */
 function button() {
 	return array(
@@ -132,7 +132,7 @@ function button() {
 /**
  * Returns image allowed markup
  *
- * @return array
+ * @return array<mixed>
  */
 function images() {
 	return array(
@@ -154,7 +154,7 @@ function images() {
 /**
  * Returns pagination allowed markup
  *
- * @return array
+ * @return array<mixed>
  */
 function pagination() {
 	return array(
@@ -188,7 +188,7 @@ function pagination() {
 /**
  * Returns error display allowed markup
  *
- * @return array
+ * @return array<mixed>
  */
 function error() {
 	return array(
@@ -204,7 +204,7 @@ function error() {
 /**
  * Returns SVG allowed markup
  *
- * @return array
+ * @return array<mixed>
  */
 function svg() {
 	return array(
@@ -283,7 +283,7 @@ function svg() {
 /**
  * Returns global allowed markup
  *
- * @return array
+ * @return array<mixed>
  */
 function global_safe_tags() {
 	return array(
