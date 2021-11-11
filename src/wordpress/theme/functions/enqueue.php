@@ -22,7 +22,7 @@ function enqueue_files() {
 					break;
 
 				default:
-					$deps = null;
+					$deps = array();
 					break;
 			}
 			wp_enqueue_script( $name, get_template_directory_uri() . '/assets/js/' . $full_name, $deps, null, false ); // phpcs:ignore WordPress.WP.EnqueuedResourceParameters.MissingVersion
@@ -36,7 +36,7 @@ function enqueue_files() {
 	
 			switch ( $name ) {
 				default:
-					$deps = null;
+					$deps = array();
 					break;
 			}
 			wp_enqueue_style( $name, get_template_directory_uri() . '/assets/css/' . $full_name, $deps, null, 'all' ); // phpcs:ignore WordPress.WP.EnqueuedResourceParameters.MissingVersion
