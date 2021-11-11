@@ -34,13 +34,13 @@
 
 ### VS Code:
 
-First, Find the file named "phpstan-vscode.neon". When you have found that, rename it to "phpstan.neon". You can either delete or ignore the other editor files, but make sure you leave phpstan.dist.neon as this is required.
+First, Find the file named "phpstan-vscode.neon". When you have found that, copy it to "phpstan.neon". You can either delete or ignore the other editor files, but make sure you leave phpstan.dist.neon as this is required.
 
 Secondly, there is a folder of recommended extensions. You should have a dialog pop up to install / enable these, but if not, or you already dismissed it, go to the extensions tab, filter by recommendations and you should see the workspace recommendations there with an install all button. There is also some workspace setting in that folder, which will automatically set the correct settings for these extensions.
 
 ### Atom (UNTESTED)
 
-First, Find the file named "phpstan-atom.neon". When you have found that, rename it to "phpstan.neon". You can either delete or ignore the other editor files, but make sure you leave phpstan.dist.neon as this is required.
+First, Find the file named "phpstan-atom.neon". When you have found that, copy it to "phpstan.neon". You can either delete or ignore the other editor files, but make sure you leave phpstan.dist.neon as this is required.
 
 Secondly, install the following plugins to improve your editing experience:
 -editorconfig
