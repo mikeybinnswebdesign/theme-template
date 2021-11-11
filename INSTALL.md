@@ -4,7 +4,7 @@
 
 - Node.js
 - Composer
-- A compatible code editor (VS Code)
+- A compatible code editor (VS Code, Atom)
 - Git
 - A way to host a wordpress site locally
 
