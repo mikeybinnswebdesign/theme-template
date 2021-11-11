@@ -11,10 +11,7 @@
 	<!-- config-stop -->
 	<rule ref="./common-php-rules.xml"/>
 	<file>./src/wordpress</file>
-	<rule ref="WPThemeReview">
-		<exclude name="WPThemeReview.PluginTerritory.ForbiddenFunctions.plugin_territory_register_post_type"/>
-		<exclude name="WPThemeReview.PluginTerritory.ForbiddenFunctions.plugin_territory_register_taxonomy"/>
-	</rule>
+	<rule ref="WPThemeReview" />
 	<rule ref="WordPress.Files.FileName">
 		<properties>
 			<property name="is_theme" value="true"/>
