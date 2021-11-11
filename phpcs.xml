@@ -10,7 +10,7 @@
 	</rule>
 	<!-- config-stop -->
 	<rule ref="./common-php-rules.xml"/>
-	<file>.</file>
+	<file>./src/wordpress</file>
 	<rule ref="WPThemeReview">
 		<exclude name="WPThemeReview.PluginTerritory.ForbiddenFunctions.plugin_territory_register_post_type"/>
 		<exclude name="WPThemeReview.PluginTerritory.ForbiddenFunctions.plugin_territory_register_taxonomy"/>
