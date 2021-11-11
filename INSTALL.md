@@ -11,8 +11,8 @@
 ## Steps to begin
 
 1. Take a copy of this code and copy it into a folder outside of the Wordpress installation (excluding .git folder)
-2. Set the theme_folder variable in `.env.example` to point the correct folder and then copy the file to `.env` (the placeholder will be replaced in the next step).
-3. Use search and replace to change all placeholders as laid out below. When it's done, the table below should act as a helpful reference guide should you need it.
+2. Use search and replace to change all placeholders as laid out below. When it's done, the table below should act as a helpful reference guide should you need it.
+3. Set the theme_folder variable in `.env.example` to point the correct folder and then copy the file to `.env`.
 4. Run `npm install` and `composer install` to install all the npm and composer dependencies.
 5. Update dependencies as required using `update` and `outdated` commands for both npm and composer. (be careful of breaking changes)
 6. Perform code editor setup, instructions below.
