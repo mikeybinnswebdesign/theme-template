@@ -9,7 +9,7 @@
 		</properties>
 	</rule>
 	<!-- config-stop -->
-	<rule ref="../common-php-rules.xml"/>
+	<rule ref="./common-php-rules.xml"/>
 	<file>.</file>
 	<rule ref="WPThemeReview">
 		<exclude name="WPThemeReview.PluginTerritory.ForbiddenFunctions.plugin_territory_register_post_type"/>
