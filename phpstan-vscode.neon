@@ -1,4 +1,4 @@
 includes:
-	- phpstan.neon.dist
+	- phpstan.dist.neon
 parameters:
 	editorUrl: 'vscode://file/%%file%%:%%line%%'
