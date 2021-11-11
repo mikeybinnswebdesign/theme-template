@@ -1,13 +1,13 @@
 <?php
 /**
  * Handles loading of stylesheets and javascript files.
- * 
- * @package %%THEME_NAME_SLUG%%
+ *
+ * @package %%THEME_NAMESPACE%%
  */
 
 /**
  * Enqueue stylesheets and script files
- * 
+ *
  * This function automatically enqueues files from the relevant folders and enqueues hashed files correctly.
  */
 function enqueue_files() {
@@ -47,9 +47,9 @@ add_action( 'wp_enqueue_scripts', 'enqueue_files' );
 
 /**
  * Defer JS files.
- * 
+ *
  * Deferring JS files is good for performance. It allows the browser to start downloading the file early (in the head) but doesn't block the HTML rendering and instead loads the JS afterwards.
- * 
+ *
  * @param string $tag this is the tag to be filtered.
  * @param string $handle this is the name for the script as set when enqueued.
  * @param string $src this is the contents of the src attribute in the tag.
