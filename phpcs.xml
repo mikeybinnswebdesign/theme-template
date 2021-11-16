@@ -1,16 +1,36 @@
 <?xml version="1.0"?>
 <ruleset name="Theme Rules">
-	<!-- Must config below this comment until config-stop -->
+	<file>./src/wordpress</file>
+	<arg name="extensions" value="php" />
+	<arg name="report" value="summary,source"/>
+	<arg value="sp"/>
+	<arg name="parallel" value="20"/>
+	<arg name="cache"/>
+	<ini name="memory_limit" value="256M"/>
+	<rule ref="WordPress">
+		<exclude name="Generic.Formatting.MultipleStatementAlignment"/>
+		<exclude name="WordPress.Arrays.MultipleStatementAlignment"/>
+	</rule>
 	<rule ref="WordPress.WP.I18n">
 		<properties>
 			<property name="text_domain" type="array">
-				<element value="%%THEME_NAME_SLUG%%"/><!-- Adjust this -->
+				<element value="%%THEME_NAME_SLUG%%"/>
 			</property>
 		</properties>
 	</rule>
-	<!-- config-stop -->
-	<rule ref="./common-php-rules.xml"/>
-	<file>./src/wordpress</file>
+	<config name="minimum_supported_wp_version" value="%%MIN_WP_VERSION%%"/>
+	<rule ref="Generic.Files.LineEndings">
+		<properties>
+			<property name="eolChar" value="\n"/>
+    </properties>
+	</rule>
+	<rule ref="Generic.CodeAnalysis.UnusedFunctionParameter"/>
+	<rule ref="Generic.WhiteSpace.DisallowSpaceIndent"/>
+	<rule ref="Squiz.WhiteSpace.SuperfluousWhitespace">
+		<properties>
+			<property name="ignoreBlankLines" value="true"/>
+		</properties>
+	</rule>
 	<rule ref="WPThemeReview" />
 	<rule ref="./php-version.xml"/>
 	<rule ref="WordPress.Files.FileName">
